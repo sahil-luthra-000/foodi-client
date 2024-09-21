@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import axios from "axios";
-import app from "../firebase/firebase.config"; // Ensure this path is correct
+import app from "../firebase/Firebase.config.js"; // Ensure this path is correct
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
