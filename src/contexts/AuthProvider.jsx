@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import axios from "axios";
-import app from "../firebase/firebase.config";
+import app from "../firebase/firebase.config"; // Ensure this path is correct
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -31,6 +31,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const login = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -52,7 +53,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         const userInfo = { email: currentUser.email };
         axios
-          .post("http://localhost:6001/jwt", userInfo)
+          .post("http://localhost:6001/jwt", userInfo) // Adjust for production
           .then((response) => {
             if (response.data.token) {
               localStorage.setItem("access-token", response.data.token);
