@@ -20,7 +20,7 @@ const CartPage = () => {
   // Handle quantity increase
   const handleIncrease = async (item) => {
     try {
-      const response = await fetch(`https://foodi-rnmx.onrender.com/carts/${item._id}`, {
+      const response = await fetch(`https://foodi-server-ixn9.onrender.com/carts/${item._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const CartPage = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`https://foodi-rnmx.onrender.com/carts/${item._id}`).then(response => {
+        axios.delete(`https://foodi-server-ixn9.onrender.com/carts/${item._id}`).then(response => {
           if (response) {
             refetch();
              Swal.fire("Deleted!", "Your file has been deleted.", "success");
