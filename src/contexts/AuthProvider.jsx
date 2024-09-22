@@ -47,7 +47,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             if(currentUser){
                 const userInfo ={email: currentUser.email}
-                axios.post('https://foodi-rnmx.onrender.com/jwt', userInfo)
+                axios.post('https://foodi-server-ixn9.onrender.com/jwt', userInfo)
                   .then( (response) => {
                     // console.log(response.data.token);
                     if(response.data.token){
