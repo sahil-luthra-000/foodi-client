@@ -81,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "update-menu/:id",
         element: <UpdateMenu />,
-        loader: ({ params }) => fetch(`https://foodi-rnmx.onrender.com/menu/${params.id}`),
+        loader: ({ params }) => fetch(`https://foodi-server-ixn9.onrender.com/menu/${params.id}`),
       },
     ],
   },
