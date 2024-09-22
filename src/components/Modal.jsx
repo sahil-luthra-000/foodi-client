@@ -33,7 +33,7 @@ const Modal = () => {
           email: data.email,
         };
         axios
-          .post("https://foodi-rnmx.onrender.com/users", userInfor)
+          .post("https://foodi-server-ixn9.onrender.com", userInfor)
           .then((response) => {
             // console.log(response);
             alert("Signin successful!");
@@ -60,7 +60,7 @@ const Modal = () => {
           email: result?.user?.email,
         };
         axios
-          .post("https://foodi-rnmx.onrender.com/users", userInfor)
+          .post("https://foodi-server-ixn9.onrender.com", userInfor)
           .then((response) => {
             // console.log(response);
             alert("Signin successful!");
